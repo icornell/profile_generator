@@ -50,12 +50,12 @@ const survey = function () {
       `Thank you for completing this user survey! Here is your new user profile: \n`
     );
     setTimeout(() => {
-      for (const key in answers) {
-        for (const key2 in questions) {
-          if (key === key2) {
+      for (const key in answers) {//loop through answers object
+        for (const key2 in questions) {//loop through questions object
+          if (key === key2) {//if the keys match, log the question and answer
             console.log(`${questions[key2]}: ${answers[key]}`);
-            setTimeout(() => {}, delay);
-            delay += 200;
+            setTimeout(() => {}, delay);//add a delay between each log
+            delay += 200;//increment delay by 200 milliseconds every loop
           }
         }
       }
